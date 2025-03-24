@@ -14,7 +14,8 @@ btnResetGrid.addEventListener("click", () => {
 
 function createGrid(xValue, yValue) {
   if (typeof xValue !== "number" || typeof yValue !== "number") {
-    return "You need to enter a number";
+    alert("You must enter a valid number");
+    return;
   }
 
   if (xValue > 100 || yValue > 100) {
@@ -22,12 +23,10 @@ function createGrid(xValue, yValue) {
     warningDiv.classList.add("warningDiv");
     warningDiv.innerText = "There is a maximum of 100x100 grid";
     gridContainer.appendChild(warningDiv);
-
     return;
   }
 
   gridContainer.innerHTML = ""; //Reset values in case user makes secound grid.
-
   for (let n = 1; n < xValue + 1; n++) {
     let gridDivX = document.createElement("div");
     gridDivX.classList = `div${n}X`;
@@ -51,6 +50,5 @@ function createGrid(xValue, yValue) {
   }
 }
 
-createGrid();
 //Alternativ approach: mouseover could apply a new class instead, and then have a css rule for that.
 //Does not sound like that might be very effective, but it is an alternative approach.
