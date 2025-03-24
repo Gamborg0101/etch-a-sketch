@@ -1,8 +1,45 @@
-.grid-container {
-    display: flex;
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
 
+.grid-container {
+  display: flex;
 }
 
 .x-divs {
-    background-color: red;
+  background-color: red;
+}
+
+.grid-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.warningDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  font-size: 36px;
+  font-weight: bold;
+}
+.button-container {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-grid,
+.reset-grid {
+  background-color: #04aa6d; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
